@@ -1,0 +1,334 @@
+/* =========================================================
+   THOR DISTRIBUIDORA DE ALIMENTOS
+   PDV - LARANJA E PRETO
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #111;
+    color: #fff;
+    min-height: 100vh;
+}
+
+/* TOPO */
+
+.topo {
+    background: #000;
+    border-bottom: 3px solid #ff7a00;
+    padding: 18px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.topo h1 {
+    color: #ff7a00;
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+.topo p {
+    color: #ddd;
+    margin-top: 4px;
+    font-size: 14px;
+}
+
+.topo button {
+    background: #ff7a00;
+    color: #000;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.topo button:hover {
+    background: #ff8f26;
+}
+
+/* MENU */
+
+.menu {
+    background: #181818;
+    display: flex;
+    gap: 10px;
+    padding: 12px 20px;
+    border-bottom: 1px solid #333;
+    overflow-x: auto;
+}
+
+.menu button {
+    background: #222;
+    color: #fff;
+    border: 1px solid #444;
+    padding: 12px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+.menu button:hover {
+    background: #ff7a00;
+    color: #000;
+    border-color: #ff7a00;
+}
+
+/* CONTEÚDO */
+
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px 20px;
+}
+
+.tela {
+    display: none;
+}
+
+.tela.ativa {
+    display: block;
+}
+
+.cabecalho {
+    margin-bottom: 25px;
+}
+
+.cabecalho h2 {
+    color: #ff7a00;
+    font-size: 27px;
+    margin-bottom: 8px;
+}
+
+.cabecalho p {
+    color: #bbb;
+}
+
+/* CARDS */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: #1c1c1c;
+    border: 1px solid #333;
+    border-left: 5px solid #ff7a00;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card span {
+    display: block;
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.card strong {
+    display: block;
+    color: #ff7a00;
+    font-size: 30px;
+}
+
+.card p {
+    color: #bbb;
+    margin-top: 6px;
+}
+
+/* FORMULÁRIO */
+
+#formEntrega {
+    background: #1b1b1b;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 25px;
+    max-width: 700px;
+}
+
+label {
+    display: block;
+    margin-top: 18px;
+    margin-bottom: 7px;
+    color: #ff7a00;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 13px;
+    background: #111;
+    color: #fff;
+    border: 1px solid #444;
+    border-radius: 7px;
+    outline: none;
+    font-size: 15px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #ff7a00;
+    box-shadow: 0 0 0 2px rgba(255, 122, 0, 0.15);
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* NOTAS */
+
+#camposNotas {
+    margin-top: 5px;
+}
+
+.campo-nota {
+    margin-top: 12px;
+}
+
+.campo-nota label {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* BOTÃO PRINCIPAL */
+
+.botao-principal {
+    width: 100%;
+    margin-top: 25px;
+    padding: 15px;
+    background: #ff7a00;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.botao-principal:hover {
+    background: #ff8f26;
+    transform: translateY(-1px);
+}
+
+/* LISTAS */
+
+.lista {
+    display: grid;
+    gap: 15px;
+}
+
+.entrega {
+    background: #1b1b1b;
+    border: 1px solid #333;
+    border-left: 5px solid #ff7a00;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.entrega h3 {
+    color: #ff7a00;
+    margin-bottom: 10px;
+}
+
+.entrega p {
+    color: #ccc;
+    margin: 6px 0;
+}
+
+.entrega strong {
+    color: #fff;
+}
+
+.entrega button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    background: #ff7a00;
+    color: #000;
+    border: none;
+    border-radius: 7px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* MENSAGEM VAZIA */
+
+.vazio {
+    background: #1b1b1b;
+    border: 1px dashed #444;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    color: #999;
+}
+
+/* RODAPÉ */
+
+footer {
+    margin-top: 40px;
+    padding: 25px 20px;
+    text-align: center;
+    background: #000;
+    border-top: 2px solid #ff7a00;
+    color: #ff7a00;
+}
+
+footer small {
+    display: block;
+    color: #888;
+    margin-top: 7px;
+}
+
+/* CELULAR */
+
+@media (max-width: 700px) {
+
+    .topo {
+        padding: 15px;
+    }
+
+    .topo h1 {
+        font-size: 25px;
+    }
+
+    .topo button {
+        padding: 9px 13px;
+    }
+
+    .menu {
+        padding: 10px;
+    }
+
+    .menu button {
+        padding: 10px 13px;
+        font-size: 13px;
+    }
+
+    main {
+        padding: 22px 15px;
+    }
+
+    .cabecalho h2 {
+        font-size: 23px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    #formEntrega {
+        padding: 18px;
+    }
+}
