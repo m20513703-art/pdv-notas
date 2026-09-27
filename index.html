@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>THOR Distribuidora de Alimentos</title>
+
+    <link rel="stylesheet" href="pdv.css">
+</head>
+
+<body>
+
+<header class="topo">
+    <div>
+        <h1>THOR</h1>
+        <p>Distribuidora de Alimentos</p>
+    </div>
+
+    <button onclick="sair()">Sair</button>
+</header>
+
+<nav class="menu">
+    <button onclick="abrirTela('inicio')">🏠 Início</button>
+    <button onclick="abrirTela('nova')">📦 Nova Entrega</button>
+    <button onclick="abrirTela('pendentes')">🕐 Pendentes</button>
+    <button onclick="abrirTela('concluidas')">✅ Concluídas</button>
+</nav>
+
+<main>
+
+    <!-- INÍCIO -->
+    <section id="inicio" class="tela ativa">
+
+        <div class="cabecalho">
+            <h2>Painel de Entregas</h2>
+            <p>Controle das entregas e assinaturas.</p>
+
+            <p>
+                📅 <strong>Entregas de hoje — <span id="dataHoje"></span></strong>
+            </p>
+        </div>
+
+        <div class="cards">
+
+            <div class="card">
+                <span>📦</span>
+                <strong id="totalEntregas">0</strong>
+                <p>Total de entregas</p>
+            </div>
+
+            <div class="card">
+                <span>🕐</span>
+                <strong id="totalPendentes">0</strong>
+                <p>Pendentes</p>
+            </div>
+
+            <div class="card">
+                <span>✅</span>
+                <strong id="totalConcluidas">0</strong>
+                <p>Concluídas</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- NOVA ENTREGA -->
+    <section id="nova" class="tela">
+
+        <div class="cabecalho">
+            <h2>📦 Nova Entrega</h2>
+            <p>Cadastre as notas que serão entregues.</p>
+        </div>
+
+        <form id="formEntrega">
+
+            <label>Cliente</label>
+
+            <input
+                type="text"
+                id="cliente"
+                placeholder="Nome do cliente"
+                required
+            >
+
+
+            <label>Quantidade de notas</label>
+
+            <select
+                id="quantidadeNotas"
+                onchange="criarCamposNotas()"
+                required
+            >
+                <option value="">Selecione</option>
+                <option value="1">1 nota</option>
+                <option value="2">2 notas</option>
+                <option value="3">3 notas</option>
+                <option value="4">4 notas</option>
+                <option value="5">5 notas</option>
+                <option value="6">6 notas</option>
+                <option value="7">7 notas</option>
+                <option value="8">8 notas</option>
+                <option value="9">9 notas</option>
+                <option value="10">10 notas</option>
+            </select>
+
+
+            <div id="camposNotas"></div>
+
+
+            <label>Observação</label>
+
+            <textarea
+                id="observacao"
+                placeholder="Observação da entrega (opcional)"
+            ></textarea>
+
+
+            <button
+                type="submit"
+                class="botao-principal"
+            >
+                🚚 Criar Entrega
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- PENDENTES -->
+    <section id="pendentes" class="tela">
+
+        <div class="cabecalho">
+            <h2>🕐 Entregas Pendentes</h2>
+            <p>Entregas aguardando assinatura.</p>
+        </div>
+
+        <div id="listaPendentes" class="lista"></div>
+
+    </section>
+
+
+    <!-- CONCLUÍDAS -->
+    <section id="concluidas" class="tela">
+
+        <div class="cabecalho">
+            <h2>✅ Entregas Concluídas</h2>
+            <p>Entregas que já foram assinadas.</p>
+        </div>
+
+        <div id="listaConcluidas" class="lista"></div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <strong>THOR Distribuidora de Alimentos</strong>
+
+    <small>
+        Sistema desenvolvido por MM Sistemas e Tecnologia
+    </small>
+
+</footer>
+
+
+<script src="pdv.js"></script>
+
+</body>
+</html>
